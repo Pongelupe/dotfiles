@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+#git
+alias g='git'
+alias ga='git add'
+alias gaa='git add -A'
+alias gs='git status'
+alias gm='git merge'
+alias gl='git log'
+alias gl1='git log -n1'
+alias gc='git checkout'
+alias gcb='git checkout -b'
+alias gcommit='git commit -m'
+alias gcommitall='git commit -am'
+alias gpush='git push'
+alias gpushd='git push --delete origin'
+alias gpusho='git push -u origin $(git branch | grep \* | tr " " "\n" | tail -n1)'
+alias gpull='git pull'
+alias grestore='git restore'
+alias grestore-staged='git restore --staged'
+alias greset='git reset --hard'
+alias gb='git branch'
+alias gbd='git branch -D'
+
+#mermaid 
+alias mmdc='docker run --rm -u `id -u`:`id -g` -v ./:/data minlag/mermaid-cli'
+
+#maven
+alias m='mvn'
+alias mc='mvn clean'
+alias mi='mvn install'
+alias mci='mvn clean install -U'
+alias mt='mvn test'
+alias mci-skip-tests='mvn clean install -U -DskipTests'
+alias mt-skip-tests='mvn test -DskipTests'
+alias msources='mvn dependency:sources'
+alias mtree='mvn dependency:tree'
+
+#docker
+alias d='docker'
+alias dps'docker ps'
+alias dpsa='docker ps -a'
+
+alias du='du -h'

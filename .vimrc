@@ -16,6 +16,8 @@ set tabstop=2
 set hlsearch
 set nospell
 
+filetype plugin on
+
 set background=dark
 colorscheme plastic
 
@@ -55,5 +57,10 @@ let maplocalleader = ","
 Plug 'kamykn/spelunker.vim'
 let g:spelunker_disable_uri_checking = 1
 
+Plug 'preservim/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+Plug 'jiangmiao/auto-pairs'
+Plug 'farmergreg/vim-lastplace'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()

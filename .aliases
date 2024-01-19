@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+eval $(thefuck --alias)
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -48,3 +50,13 @@ alias dps'docker ps'
 alias dpsa='docker ps -a'
 
 alias du='du -h'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+#jupyter
+alias j='jupyter'
+alias j-notebook='jupyter notebook &'
+alias jupytext-bind='jupytext --set-formats ipynb,py:percent '
+
+#pytorch
+alias pytorch='source ~/build/pytorch/bin/activate'

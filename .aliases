@@ -60,3 +60,13 @@ alias jupytext-bind='jupytext --set-formats ipynb,py:percent '
 
 #pytorch
 alias pytorch='source ~/build/pytorch/bin/activate'
+
+#flutter
+alias f='flutter'
+alias fd='flutter doctor'
+alias frun='flutter run'
+alias fget='flutter pub get'
+alias fadd='flutter pub add'
+alias fremove='flutter pub remove'
+alias sdkmanager='sdkmanager --sdk_root=${ANDROID_HOME}'
+

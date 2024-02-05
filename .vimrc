@@ -68,4 +68,6 @@ Plug 'untitled-ai/jupyter_ascending.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
 call plug#end()

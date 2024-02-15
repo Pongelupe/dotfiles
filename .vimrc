@@ -70,4 +70,7 @@ Plug 'thosakwe/vim-flutter'
 
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
+Plug 'preservim/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
 call plug#end()

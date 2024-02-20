@@ -32,6 +32,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.aux$', '\.bbl$', '\.fls$', '\.lof$', '\.lot$']
+nmap <F2> :NERDTreeToggle<CR>
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

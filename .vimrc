@@ -75,6 +75,9 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+let g:instant_markdown_theme = 'dark'
+let g:instant_markdown_allow_unsafe_content = 1
+let g:instant_markdown_mathjax = 1
 
 Plug 'preservim/tagbar'
 nmap <F8> :TagbarToggle<CR>

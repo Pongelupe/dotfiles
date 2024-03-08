@@ -2,15 +2,22 @@
 
 eval $(thefuck --alias)
 
-# Easier navigation: .., ..., ...., ....., ~ and -
+# Easier navigation: .., ..., ...., .....
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# utilities
+alias :q="poweroff"
+alias du='du -h'
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
 #git
 alias g='git'
 alias ga='git add'
+alias gap='git add -p'
 alias gaa='git add -A'
 alias gs='git status'
 alias gm='git merge'
@@ -52,10 +59,8 @@ alias mtree='mvn dependency:tree'
 alias d='docker'
 alias dps'docker ps'
 alias dpsa='docker ps -a'
-
-alias du='du -h'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+alias dstop='docker stop'
+alias dstart='docker start'
 
 #jupyter
 alias j='jupyter'

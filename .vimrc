@@ -15,6 +15,7 @@ set expandtab
 set tabstop=2
 set hlsearch
 set nospell
+let maplocalleader = ","
 
 filetype plugin on
 
@@ -27,16 +28,42 @@ au CursorHoldI * stopinsert
 au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
 au InsertLeave * let &updatetime=updaterestore
 
-Plug 'tpope/vim-fugitive'
+" Dependencies
 
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
+Plug 'airblade/vim-gitgutter'
+
+
+" appearance, UI utils and text editing
 Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.aux$', '\.bbl$', '\.fls$', '\.lof$', '\.lot$']
 nmap <F2> :NERDTreeToggle<CR>
+Plug 'preservim/tagbar'
+nmap <F8> :TagbarToggle<CR>
+Plug 'mhinz/vim-startify'
+Plug 'ryanoasis/vim-devicons'
+Plug 'farmergreg/vim-lastplace'
+Plug 'vim-airline/vim-airline'
 
+Plug 'kamykn/spelunker.vim'
+let g:spelunker_disable_uri_checking = 1
+Plug 'preservim/nerdcommenter'
+let g:NERDCreateDefaultMappings = 1
+Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'terryma/vim-multiple-cursors'
 
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+let g:instant_markdown_theme = 'dark'
+let g:instant_markdown_allow_unsafe_content = 1
+let g:instant_markdown_mathjax = 1
+
+
+" latex
 Plug 'aclements/latexrun'
 Plug 'lervag/vimtex'
 " Viewer options: One may configure the viewer either by specifying a built-in
@@ -57,34 +84,11 @@ let g:Tex_IgnoredWarnings =
     \'Double space found.'."\n"
 let g:Tex_IgnoreLevel = 99
 
-" Most VimTeX mappings rely on localleader and this can be changed with the
-" following line. The default is usually fine and is the symbol "\".
-let maplocalleader = ","
 
-Plug 'kamykn/spelunker.vim'
-let g:spelunker_disable_uri_checking = 1
-
-Plug 'preservim/nerdcommenter'
-let g:NERDCreateDefaultMappings = 1
-Plug 'airblade/vim-gitgutter'
-Plug 'jiangmiao/auto-pairs'
-Plug 'farmergreg/vim-lastplace'
-Plug 'vim-airline/vim-airline'
+" specific programming language
 Plug 'untitled-ai/jupyter_ascending.vim'
-
 
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
-
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-let g:instant_markdown_theme = 'dark'
-let g:instant_markdown_allow_unsafe_content = 1
-let g:instant_markdown_mathjax = 1
-
-Plug 'preservim/tagbar'
-nmap <F8> :TagbarToggle<CR>
-
-Plug 'terryma/vim-multiple-cursors'
-Plug 'mhinz/vim-startify'
 
 call plug#end()

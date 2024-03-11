@@ -65,6 +65,7 @@ Plug 'kamykn/spelunker.vim'
 let g:spelunker_disable_uri_checking = 1
 
 Plug 'preservim/nerdcommenter'
+let g:NERDCreateDefaultMappings = 1
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'farmergreg/vim-lastplace'
@@ -82,5 +83,8 @@ let g:instant_markdown_mathjax = 1
 
 Plug 'preservim/tagbar'
 nmap <F8> :TagbarToggle<CR>
+
+Plug 'terryma/vim-multiple-cursors'
+Plug 'mhinz/vim-startify'
 
 call plug#end()

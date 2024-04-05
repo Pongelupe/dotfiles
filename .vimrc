@@ -5,31 +5,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
-
-
-set number relativenumber
-set linebreak
-set nobackup
-set wildmode=longest,list
-set expandtab
-set tabstop=2
-set hlsearch
-set nospell
-let maplocalleader = ","
-
-filetype plugin on
-
-set background=dark
-colorscheme plastic
-
-" automatically leave insert mode after 'updatetime' milliseconds of inaction
-au CursorHoldI * stopinsert
-" set 'updatetime' to 15 seconds when in insert mode
-au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
-au InsertLeave * let &updatetime=updaterestore
-
-" Dependencies
-
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
@@ -37,6 +12,7 @@ Plug 'airblade/vim-gitgutter'
 
 
 " appearance, UI utils and text editing
+Plug 'ajmwagar/vim-deus'
 Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.aux$', '\.bbl$', '\.fls$', '\.lof$', '\.lot$']
@@ -47,9 +23,13 @@ Plug 'mhinz/vim-startify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'farmergreg/vim-lastplace'
 Plug 'vim-airline/vim-airline'
+Plug 'sheerun/vim-polyglot'
+Plug 'dense-analysis/ale'
 
 Plug 'kamykn/spelunker.vim'
 let g:spelunker_disable_uri_checking = 1
+
+
 Plug 'preservim/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
 Plug 'jiangmiao/auto-pairs'
@@ -92,3 +72,26 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
 call plug#end()
+
+set background=dark
+colors deus
+set number relativenumber
+set linebreak
+set nobackup
+set wildmode=longest,list
+set expandtab
+set tabstop=2
+set hlsearch
+set nospell
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+let maplocalleader = ","
+
+filetype plugin on
+
+" automatically leave insert mode after 'updatetime' milliseconds of inaction
+au CursorHoldI * stopinsert
+" set 'updatetime' to 15 seconds when in insert mode
+au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
+au InsertLeave * let &updatetime=updaterestore

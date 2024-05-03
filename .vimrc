@@ -17,17 +17,23 @@ Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.aux$', '\.bbl$', '\.fls$', '\.lof$', '\.lot$']
 nmap <F2> :NERDTreeToggle<CR>
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'preservim/tagbar'
 nmap <F8> :TagbarToggle<CR>
 Plug 'mhinz/vim-startify'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'farmergreg/vim-lastplace'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='deus'
 Plug 'sheerun/vim-polyglot'
 Plug 'dense-analysis/ale'
 
+Plug 'mateusbraga/vim-spell-pt-br'
 Plug 'kamykn/spelunker.vim'
 let g:spelunker_disable_uri_checking = 1
+Plug 'ap/vim-css-color'
 
 
 Plug 'preservim/nerdcommenter'
@@ -37,6 +43,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+Plug 'godlygeek/tabular'
+Plug 'preservim/vim-markdown'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 let g:instant_markdown_theme = 'dark'
 let g:instant_markdown_allow_unsafe_content = 1
@@ -46,6 +54,7 @@ let g:instant_markdown_mathjax = 1
 " latex
 Plug 'aclements/latexrun'
 Plug 'lervag/vimtex'
+Plug 'joom/latex-unicoder.vim'
 " Viewer options: One may configure the viewer either by specifying a built-in
 " viewer method:
 let g:vimtex_view_method = 'zathura'
@@ -66,11 +75,14 @@ let g:Tex_IgnoreLevel = 99
 
 
 " specific programming language
+Plug 'vim-python/python-syntax'
+
 Plug 'untitled-ai/jupyter_ascending.vim'
 
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
+Plug 'Jorengarenar/vim-SQL-UPPER'
 call plug#end()
 
 set background=dark

@@ -65,6 +65,8 @@ Plug 'preservim/vim-pencil'
 let g:pencil#autoformat = 1
 let g:pencil#textwidth = 130
 let g:airline_section_x = '%{PencilMode()}'
+noremap <silent> <F7> :<C-u>PFormatToggle<cr>
+inoremap <silent> <F7> <C-o>:PFormatToggle<cr>
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd,md call pencil#init()
@@ -114,11 +116,7 @@ let g:instant_markdown_mathjax = 1
 Plug 'aclements/latexrun'
 Plug 'lervag/vimtex'
 Plug 'joom/latex-unicoder.vim'
-" Viewer options: One may configure the viewer either by specifying a built-in
-" viewer method:
 let g:vimtex_view_method = 'zathura'
-
-" Or with a generic interface:
 let g:vimtex_view_general_viewer = 'okular'
 let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 let g:Tex_IgnoredWarnings = 

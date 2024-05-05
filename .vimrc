@@ -4,6 +4,30 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+set number relativenumber
+set linebreak
+set nobackup
+set wildmode=longest,list
+set expandtab
+set tabstop=2
+set hlsearch
+set nospell
+set spelllang=en_us
+set encoding=utf-8
+
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+let maplocalleader = ","
+
+filetype plugin on
+set nocompatible
+
+" automatically leave insert mode after 'updatetime' milliseconds of inaction
+au CursorHoldI * stopinsert
+" set 'updatetime' to 15 seconds when in insert mode
+au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
+au InsertLeave * let &updatetime=updaterestore
+
 call plug#begin()
 " git
 Plug 'tpope/vim-fugitive'
@@ -24,18 +48,10 @@ Plug 'mhinz/vim-startify'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'farmergreg/vim-lastplace'
+Plug 'ap/vim-css-color'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='deus'
-Plug 'sheerun/vim-polyglot'
-Plug 'dense-analysis/ale'
-
-Plug 'mateusbraga/vim-spell-pt-br'
-Plug 'kamykn/spelunker.vim'
-let g:spelunker_disable_uri_checking = 1
-Plug 'ap/vim-css-color'
-
-
 Plug 'preservim/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
 Plug 'jiangmiao/auto-pairs'
@@ -43,13 +59,56 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
+
+" writing
+Plug 'preservim/vim-pencil'
+let g:pencil#autoformat = 1
+let g:pencil#textwidth = 130
+let g:airline_section_x = '%{PencilMode()}'
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd,md call pencil#init()
+  autocmd FileType tex call pencil#init()
+augroup END
+
+Plug 'sheerun/vim-polyglot'
+
+Plug 'dbmrq/vim-ditto'
+" Use autocmds to check your text automatically and keep the highlighting
+" up to date (easier):
+au FileType markdown,text,tex,md DittoOn  " Turn on Ditto's autocmds
+nmap <leader>di <Plug>ToggleDitto      " Turn Ditto on and off
+nmap =d <Plug>DittoNext                " Jump to the next word
+nmap -d <Plug>DittoPrev                " Jump to the previous word
+nmap +d <Plug>DittoGood                " Ignore the word under the cursor
+nmap _d <Plug>DittoBad                 " Stop ignoring the word under the cursor
+nmap ]d <Plug>DittoMore                " Show the next matches
+nmap [d <Plug>DittoLess                " Show the previous matches
+
+Plug 'preservim/vim-wheel'
+let g:wheel#map#up   = '<c-k>'
+let g:wheel#map#down = '<c-j>'
+
+Plug 'kamykn/spelunker.vim'
+let g:spelunker_disable_uri_checking = 1
+let g:spelunker_disable_email_checking = 1
+let g:spelunker_disable_acronym_checking = 1
+let g:spelunker_disable_backquoted_checking = 1
+let g:spelunker_highlight_type = 2
+let g:spelunker_disable_auto_group = 1
+augroup spelunker
+  autocmd!
+  autocmd BufWinEnter,BufWritePost *.vim,*.js,*.jsx,*.json,*.md,*.tex call spelunker#check()
+augroup END
+
+Plug 'dense-analysis/ale'
+
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 let g:instant_markdown_theme = 'dark'
 let g:instant_markdown_allow_unsafe_content = 1
 let g:instant_markdown_mathjax = 1
-
 
 " latex
 Plug 'aclements/latexrun'
@@ -87,23 +146,3 @@ call plug#end()
 
 set background=dark
 colors deus
-set number relativenumber
-set linebreak
-set nobackup
-set wildmode=longest,list
-set expandtab
-set tabstop=2
-set hlsearch
-set nospell
-
-nnoremap <SPACE> <Nop>
-let mapleader=" "
-let maplocalleader = ","
-
-filetype plugin on
-
-" automatically leave insert mode after 'updatetime' milliseconds of inaction
-au CursorHoldI * stopinsert
-" set 'updatetime' to 15 seconds when in insert mode
-au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
-au InsertLeave * let &updatetime=updaterestore

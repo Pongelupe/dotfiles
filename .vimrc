@@ -70,7 +70,6 @@ inoremap <silent> <F7> <C-o>:PFormatToggle<cr>
 augroup pencil
   autocmd!
   autocmd FileType markdown,mkd,md call pencil#init()
-  autocmd FileType tex call pencil#init()
 augroup END
 
 Plug 'sheerun/vim-polyglot'

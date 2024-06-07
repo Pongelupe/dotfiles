@@ -20,6 +20,7 @@ let mapleader=" "
 let maplocalleader = ","
 
 filetype plugin on
+syntax enable
 set nocompatible
 
 " automatically leave insert mode after 'updatetime' milliseconds of inaction
@@ -61,17 +62,6 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 
 " writing
-Plug 'preservim/vim-pencil'
-let g:pencil#autoformat = 1
-let g:pencil#textwidth = 130
-let g:airline_section_x = '%{PencilMode()}'
-noremap <silent> <F7> :<C-u>PFormatToggle<cr>
-inoremap <silent> <F7> <C-o>:PFormatToggle<cr>
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd,md call pencil#init()
-augroup END
-
 Plug 'sheerun/vim-polyglot'
 
 Plug 'dbmrq/vim-ditto'

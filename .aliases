@@ -40,6 +40,7 @@ alias gb='git branch'
 alias gbd='git branch -D'
 alias gdiff='git diff'
 alias ginit='git init'
+alias gclone='git clone'
 
 #mermaid 
 alias mmdc='docker run --rm -u `id -u`:`id -g` -v ./:/data minlag/mermaid-cli'
@@ -61,6 +62,10 @@ alias dps'docker ps'
 alias dpsa='docker ps -a'
 alias dstop='docker stop'
 alias dstart='docker start'
+alias dl='docker logs'
+alias dlf='docker logs -f'
+alias dcup='docker-compose up -d'
+alias dcdown='docker-compose down'
 
 #jupyter
 alias j='jupyter'

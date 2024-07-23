@@ -102,7 +102,6 @@ augroup spelunker
   autocmd BufWinEnter,BufWritePost *.vim,*.js,*.jsx,*.json,*.md,*.tex call spelunker#check()
 augroup END
 
-Plug 'dense-analysis/ale'
 
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
@@ -131,7 +130,6 @@ let g:Tex_IgnoreLevel = 99
 
 
 " specific programming language
-Plug 'vim-python/python-syntax'
 
 Plug 'untitled-ai/jupyter_ascending.vim'
 

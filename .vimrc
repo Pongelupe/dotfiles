@@ -101,7 +101,7 @@ augroup spelunker
   autocmd!
   autocmd BufWinEnter,BufWritePost *.vim,*.js,*.jsx,*.json,*.md,*.tex call spelunker#check()
 augroup END
-
+Plug 'farconics/victionary'
 
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'

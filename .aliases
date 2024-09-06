@@ -15,6 +15,7 @@ alias pbpaste='xclip -selection clipboard -o'
 alias a='cat ~/.aliases'
 alias aupdate='source ~/.aliases'
 alias aedit='vim ~/.aliases'
+alias la='ls -a'
 
 #git
 alias g='git'
@@ -44,6 +45,7 @@ alias gbd='git branch -D'
 alias gdiff='git diff'
 alias ginit='git init'
 alias gclone='git clone'
+alias gc-p='git cherry-pick'
 
 #mermaid 
 alias mmdc='docker run --rm -u `id -u`:`id -g` -v ./:/data minlag/mermaid-cli'

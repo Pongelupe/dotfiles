@@ -105,6 +105,7 @@ Plug 'farconics/victionary'
 
 Plug 'godlygeek/tabular'
 Plug 'preservim/vim-markdown'
+let g:vim_markdown_folding_disabled = 1
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 let g:instant_markdown_theme = 'dark'
 let g:instant_markdown_allow_unsafe_content = 1

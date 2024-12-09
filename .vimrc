@@ -137,6 +137,9 @@ Plug 'untitled-ai/jupyter_ascending.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
+Plug 'rust-lang/rust.vim'
+let g:rustfmt_autosave = 1
+
 Plug 'Jorengarenar/vim-SQL-UPPER'
 call plug#end()
 

@@ -56,10 +56,12 @@ let g:airline_theme='deus'
 Plug 'preservim/nerdcommenter'
 let g:NERDCreateDefaultMappings = 1
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-dispatch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'MattesGroeger/vim-bookmarks'
+let g:bookmark_show_toggle_warning = 0
 
 function! ToggleQuickFix()
     if empty(filter(getwininfo(), 'v:val.quickfix'))

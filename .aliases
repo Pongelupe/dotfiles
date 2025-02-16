@@ -9,21 +9,23 @@ alias .....="cd ../../../.."
 
 # utilities
 alias :q="poweroff"
+alias la='ls -a'
 alias du='du -h'
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+
+#aliases and configs
 alias a='cat ~/.aliases'
 alias aupdate='source ~/.aliases'
 alias aedit='vim ~/.aliases'
 alias aedit-update='vim ~/.aliases && source ~/.aliases'
 alias av='cat ~/.vimrc'
-alias la='ls -a'
+alias av-edit='vim ~/.vimrc'
 
 #git
 alias g='git'
 alias ga='git add'
-alias gap='git add -p'
+alias gap='git add --interactive  -p'
 alias gaa='git add -A'
+alias gr='git rm'
 alias gs='git status'
 alias gm='git merge'
 alias gma='git merge -'

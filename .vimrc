@@ -63,6 +63,9 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'MattesGroeger/vim-bookmarks'
 let g:bookmark_show_toggle_warning = 0
 
+Plug '/home/pongelupe/workspace/vim/vim-control-room'
+
+
 function! ToggleQuickFix()
     if empty(filter(getwininfo(), 'v:val.quickfix'))
         copen

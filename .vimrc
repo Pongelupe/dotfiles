@@ -62,16 +62,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'MattesGroeger/vim-bookmarks'
 let g:bookmark_show_toggle_warning = 0
+Plug 'itchyny/vim-highlighturl'
 
-function! ToggleQuickFix()
-    if empty(filter(getwininfo(), 'v:val.quickfix'))
-        copen
-    else
-        cclose
-    endif
-endfunction
-
-nnoremap <silent> <F1> :call ToggleQuickFix()<cr>
+" UNIX related
+Plug 'airblade/vim-rooter'
+Plug 'tpope/vim-eunuch'
 
 
 " writing
@@ -146,5 +141,14 @@ let g:rustfmt_autosave = 1
 Plug 'Jorengarenar/vim-SQL-UPPER'
 call plug#end()
 
+function! ToggleQuickFix()
+    if empty(filter(getwininfo(), 'v:val.quickfix'))
+        copen
+    else
+        cclose
+    endif
+endfunction
+
+nnoremap <silent> <F1> :call ToggleQuickFix()<cr>
 set background=dark
 colors deus

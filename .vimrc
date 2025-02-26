@@ -141,6 +141,10 @@ let g:rustfmt_autosave = 1
 Plug 'Jorengarenar/vim-SQL-UPPER'
 call plug#end()
 
+augroup filetypedetect
+    autocmd BufNew,BufNewFile,BufRead *.keymap :setfiletype c
+augroup END
+
 function! ToggleQuickFix()
     if empty(filter(getwininfo(), 'v:val.quickfix'))
         copen

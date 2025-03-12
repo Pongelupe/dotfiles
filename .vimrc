@@ -14,6 +14,16 @@ set hlsearch
 set nospell
 set spelllang=en_us
 set encoding=utf-8
+set updatetime=300
+set signcolumn=yes
+
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 nnoremap <SPACE> <Nop>
 let mapleader=" "
@@ -66,6 +76,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'MattesGroeger/vim-bookmarks'
 let g:bookmark_show_toggle_warning = 0
 Plug 'itchyny/vim-highlighturl'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " UNIX related
 Plug 'airblade/vim-rooter'
@@ -141,7 +152,11 @@ Plug 'thosakwe/vim-flutter'
 Plug 'rust-lang/rust.vim'
 let g:rustfmt_autosave = 1
 
+" databases and SQL
 Plug 'Jorengarenar/vim-SQL-UPPER'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'kristijanhusak/vim-dadbod-completion'
 call plug#end()
 
 augroup filetypedetect

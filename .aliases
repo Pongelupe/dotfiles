@@ -17,6 +17,12 @@ alias a='cat ~/.aliases'
 alias aupdate='source ~/.aliases'
 alias aedit='vim ~/.aliases'
 alias aedit-update='vim ~/.aliases && source ~/.aliases'
+
+#vim
+alias v='vim'
+alias vpinstall='vim +'PlugInstall --sync' +qa'
+alias vpupdate='vim +'PlugUpdate --sync' +qa'
+alias vpclean='vim +'PlugClean --sync' +qa'
 alias av='cat ~/.vimrc'
 alias av-edit='vim ~/.vimrc'
 

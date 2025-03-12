@@ -43,6 +43,9 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.aux$', '\.bbl$', '\.fls$', '\.lof$', '\.lot$']
 nmap <F2> :NERDTreeToggle<CR>
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 Plug 'preservim/tagbar'
 nmap <F8> :TagbarToggle<CR>
 Plug 'mhinz/vim-startify'

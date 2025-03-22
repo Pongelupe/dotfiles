@@ -56,6 +56,9 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+Plug 'andymass/vim-matchup'
+let g:matchup_override_vimtex = 1
 Plug 'preservim/tagbar'
 nmap <F8> :TagbarToggle<CR>
 Plug 'mhinz/vim-startify'
@@ -76,6 +79,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'MattesGroeger/vim-bookmarks'
 let g:bookmark_show_toggle_warning = 0
 Plug 'itchyny/vim-highlighturl'
+Plug 'dcorral/svgpreview-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " UNIX related

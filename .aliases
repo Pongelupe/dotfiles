@@ -12,6 +12,9 @@ alias :q="poweroff"
 alias la='ls -a'
 alias du='du -h'
 
+# zmk
+alias cygnus-help='xdg-open "https://github.com/Pongelupe/cygnus-zmk-config"'
+
 #aliases and configs
 alias a='cat ~/.aliases'
 alias aupdate='source ~/.aliases'

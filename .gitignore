@@ -4,3 +4,4 @@
 secrets/.ssh/id_ed25519
 secrets/.ssh/id_rsa
 secrets/.ssh/known_hosts
+secrets/github-recovery-codes.txt

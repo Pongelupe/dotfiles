@@ -23,9 +23,9 @@ alias aedit-update='vim ~/.aliases && source ~/.aliases'
 
 #vim
 alias v='vim'
-alias vpinstall='vim +'PlugInstall --sync' +qa'
-alias vpupdate='vim +'PlugUpdate --sync' +qa'
-alias vpclean='vim +'PlugClean --sync' +qa'
+alias vpinstall='vim +'PlugInstall --sync' +qall'
+alias vpupdate='vim +'PlugUpdate --sync' +qall'
+alias vpclean='vim +'PlugClean --sync' +qall'
 alias av='cat ~/.vimrc'
 alias av-edit='vim ~/.vimrc'
 

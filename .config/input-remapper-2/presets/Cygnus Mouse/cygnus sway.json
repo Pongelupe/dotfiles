@@ -1,0 +1,134 @@
+[
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 29,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 42,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 56,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 125,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 7,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_LEFTMETA + KEY_ENTER\n",
+        "name": "sway terminal",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 29,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 42,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 56,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 125,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 6,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_LEFTMETA + KEY_D\n",
+        "name": "sway app",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 29,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 42,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 56,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 125,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 10,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_LEFTMETA + KEY_LEFTSHIFT + KEY_Q\n",
+        "name": "sway close",
+        "mapping_type": "key_macro"
+    },
+    {
+        "input_combination": [
+            {
+                "type": 1,
+                "code": 29,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 42,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 56,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 125,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            },
+            {
+                "type": 1,
+                "code": 9,
+                "origin_hash": "8146da39748ff70c879f56c2d07ad2dd"
+            }
+        ],
+        "target_uinput": "keyboard",
+        "output_symbol": "KEY_LEFTMETA + KEY_R\n",
+        "name": "sway resize",
+        "mapping_type": "key_macro"
+    }
+]

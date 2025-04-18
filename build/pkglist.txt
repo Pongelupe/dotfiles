@@ -142,6 +142,7 @@ sysfsutils
 systemd
 systemd-sysvcompat
 tar
+thefuck
 texinfo
 texlive-bibtexextra
 texlive-binextra
@@ -156,6 +157,7 @@ the_silver_searcher
 thunderbird
 tk
 transmission-gtk
+unzip
 usbutils
 util-linux
 vim
@@ -186,3 +188,10 @@ yasm
 yt-dlp
 zathura
 zathura-pdf-poppler
+zip
+zsh
+zsh-autosuggestions
+zsh-completions
+zsh-history-substring-search
+zsh-syntax-highlighting
+zsh-theme-powerlevel10k

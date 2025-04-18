@@ -1,11 +1,11 @@
 # !/bin/bash
 
-ln -s "$(pwd)/../.aliases" ~/.aliases
-ln -s "$(pwd)/../.config" ~/.config
-ln -s "$(pwd)/../.exports" ~/.exports
-ln -s "$(pwd)/../.gitconfig" ~/.gitconfig
-ln -s "$(pwd)/../.path" ~/.path
-ln -s "$(pwd)/../.ssh" ~/.ssh
-ln -s "$(pwd)/../.vim" ~/.vim
-ln -s "$(pwd)/../.vimrc" ~/.vimrc
-ln -s "$(pwd)/../.zshrc" ~/.zshrc
+ln -sf "$DOT_FILES/.aliases" "$HOME/.aliases"
+ln -sf "$DOT_FILES/.config" "$HOME/.config"
+ln -sf "$DOT_FILES/.exports" "$HOME/.exports"
+ln -sf "$DOT_FILES/.gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOT_FILES/.path" "$HOME/.path"
+ln -sf "$DOT_FILES/secrets/.ssh" "$HOME/.ssh"
+ln -sf "$DOT_FILES/.vim" "$HOME/.vim"
+ln -sf "$DOT_FILES/.vimrc" "$HOME/.vimrc"
+ln -sf "$DOT_FILES/.zshrc" "$HOME/.zshrc"

@@ -1,7 +1,7 @@
 # !/bin/bash
 
 echo "Executing a lockpick test..."
-cd ~/workspace/dotfiles/secrets
+cd $DOT_FILES/secrets
 cat skeleton_key | age -d > .key.tmp  2> /dev/null
 
 if [ $? -ne 0 ]; then

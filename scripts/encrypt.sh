@@ -9,7 +9,7 @@ if [[ ! -f "$file" || ! -r "$file" ]]; then
     exit 1  # exit
 fi
 
-if  key=$(cat ~/workspace/dotfiles/secrets/skeleton_key | age -d 2>/dev/null); then
+if  key=$(cat $DOT_FILES/secrets/skeleton_key | age -d 2>/dev/null); then
     key=$(echo $key |  awk '{print $7}')
     echo "Creating $file.age"
     age -r $key $file > $file.age

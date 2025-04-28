@@ -44,6 +44,7 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'
 Plug 'airblade/vim-gitgutter'
+Plug 'rhysd/git-messenger.vim'
 
 
 " appearance, UI utils and text editing

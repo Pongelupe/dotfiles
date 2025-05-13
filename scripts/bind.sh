@@ -9,3 +9,7 @@ ln -sf "$DOT_FILES/secrets/.ssh" "$HOME/.ssh"
 ln -sf "$DOT_FILES/.vim" "$HOME/.vim"
 ln -sf "$DOT_FILES/.vimrc" "$HOME/.vimrc"
 ln -sf "$DOT_FILES/.zshrc" "$HOME/.zshrc"
+
+# functions
+sudo ln -sf "$DOT_FILES/scripts/decrypt.sh" /usr/local/bin/decrypt
+sudo ln -sf "$DOT_FILES/scripts/encrypt.sh" /usr/local/bin/encrypt

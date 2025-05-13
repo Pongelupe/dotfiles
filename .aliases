@@ -6,6 +6,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias dot="cd $DOT_FILES"
 
 # utilities
 alias :q="poweroff"

@@ -121,12 +121,6 @@ augroup END
 Plug 'farconics/victionary'
 
 Plug 'godlygeek/tabular'
-Plug 'preservim/vim-markdown'
-let g:vim_markdown_folding_disabled = 1
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
-let g:instant_markdown_theme = 'dark'
-let g:instant_markdown_allow_unsafe_content = 1
-let g:instant_markdown_mathjax = 1
 
 " latex
 Plug 'aclements/latexrun'
@@ -158,7 +152,6 @@ Plug 'rust-lang/rust.vim'
 let g:rustfmt_autosave = 1
 
 " databases and SQL
-Plug 'Jorengarenar/vim-SQL-UPPER'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'kristijanhusak/vim-dadbod-completion'

@@ -56,6 +56,8 @@ alias gpush='git push'
 alias gpushd='git push --delete origin'
 alias gpusho='git push -u origin $(git branch | grep \* | tr " " "\n" | tail -n1)'
 alias gpull='git pull'
+alias grev='git revert'
+alias grev-last='git revert $(git log -n1 | grep commit | tr -s " " "\012" | tail -n 1)'
 alias grestore='git restore'
 alias grestore-staged='git restore --staged'
 alias greset='git reset --hard'
@@ -93,6 +95,11 @@ alias dcp='docker-compose --profile'
 alias dcup='docker-compose up -d'
 alias dcdown='docker-compose down'
 alias dcreset='docker-compose down && docker-compose up -d'
+
+# laTeX
+alias tl='find . -type f \( -name "*.aux" -o -name "*.log" -o -name "*.out" -o -name "*.toc" -o -name "*.lof" -o -name "*.lot" -o -name "*.fls" -o -name "*.fdb_latexmk" -o -name "*.bbl" -o -name "*.blg" -o -name "*.synctex.gz" -o -name "*.nav" -o -name "*.snm" -o -name "*.vrb" -o -name "*.thm" -o -name "*.brf" \)'
+
+alias tclean='find . -type f \( -name "*.aux" -o -name "*.log" -o -name "*.out" -o -name "*.toc" -o -name "*.lof" -o -name "*.lot" -o -name "*.fls" -o -name "*.fdb_latexmk" -o -name "*.bbl" -o -name "*.blg" -o -name "*.synctex.gz" -o -name "*.nav" -o -name "*.snm" -o -name "*.vrb" -o -name "*.thm" -o -name "*.brf" \) -delete'
 
 #python
 alias p='python'

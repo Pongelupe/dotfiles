@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-export PATH="$PATH:/home/pongelupe/build/android/cmdline-tools/bin"
-export ANDROID_HOME="/home/pongelupe/build/android"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/build/android/cmdline-tools/bin"
+export ANDROID_HOME="$HOME/build/android"
 export ANDROID_SDK_ROOT=$ANDROID_HOME
-export PATH="$PATH:/home/pongelupe/build/flutter/bin"
+export PATH="$PATH:$HOME/build/flutter/bin"

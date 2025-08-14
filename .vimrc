@@ -89,6 +89,7 @@ Plug 'tpope/vim-eunuch'
 
 
 " writing
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'sheerun/vim-polyglot'
 
 Plug 'dbmrq/vim-ditto'

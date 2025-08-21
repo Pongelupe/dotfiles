@@ -15,6 +15,7 @@ alias la='ls -a'
 alias du='du -h'
 alias cp='cp -i'
 alias mkdirp='mkdir -p'
+alias shex='chmod +x'
 
 # zmk
 alias cygnus-help='xdg-open "https://github.com/Pongelupe/cygnus-zmk-config"'
@@ -84,6 +85,8 @@ alias mtree='mvn dependency:tree'
 
 #docker
 alias d='docker'
+alias dfb='build_dockerfile_with_name'
+alias di='docker images'
 alias dps'docker ps'
 alias dpsa='docker ps -a'
 alias dstop='docker stop'

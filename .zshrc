@@ -94,7 +94,10 @@ for file in ~/.{path,exports,aliases}; do
 done;
 unset file;
 
-# User configuration
+UTIL_FUNCTIONS_DIR="$DOT_FILES/scripts/utils"
+for util in "$UTIL_FUNCTIONS_DIR"/*; do
+	source $util
+done
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

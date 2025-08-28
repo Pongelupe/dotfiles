@@ -53,6 +53,7 @@ Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.aux$', '\.bbl$', '\.fls$', '\.lof$', '\.lot$']
 nmap <F2> :NERDTreeToggle<CR>
+nmap <F11> :NERDTreeFind<CR>
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'

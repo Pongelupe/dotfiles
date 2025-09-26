@@ -74,6 +74,7 @@ plugins=(
 	archlinux
 	catimg
   docker-compose
+	emoji
 	fast-syntax-highlighting 
 	git
 	git-auto-fetch

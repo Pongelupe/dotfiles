@@ -107,6 +107,7 @@ alias tclean='find . -type f \( -name "*.aux" -o -name "*.log" -o -name "*.out" 
 #python
 alias p='python'
 alias penv='python -m venv'
+alias penvs='source base/bin/activate'
 alias penvb='python -m venv base && source base/bin/activate'
 alias penis='python -m venv base && source base/bin/activate && pip install -r requirements.txt'
 alias pipi='pip install'
@@ -130,3 +131,8 @@ alias fadd='flutter pub add'
 alias fremove='flutter pub remove'
 alias sdkmanager='sdkmanager --sdk_root=${ANDROID_HOME}'
 
+# oh-my-zsh
+alias emoji='print_emoji_by_name'
+alias emojir='random_emoji'
+alias emojis='display_emoji'
+alias emojisg='display_emoji | grep'

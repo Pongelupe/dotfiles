@@ -88,6 +88,20 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+preexec() { timer=$(($(date +%s%N)/1000000)) }
+precmd() {
+	if [ $timer ]; then
+		now=$(($(date +%s%N)/1000000))
+		elapsed=$(($now-$timer))
+		if [ $elapsed -gt 1000 ]; then
+			printf '\033[1;33m⏲ %.2fs [%s]\033[0m\n' $(($elapsed/1000.0)) "$(date '+%H:%S')"
+		fi
+		unset timer
+	fi
+}
+
+
 USE_POWERLINE="true"
 eval $(thefuck --alias)
 for file in ~/.{path,exports,aliases}; do
@@ -126,6 +140,8 @@ done
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+eval "$(zoxide init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

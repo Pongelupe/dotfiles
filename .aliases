@@ -2,6 +2,7 @@
 
 
 # Easier navigation: .., ..., ...., .....
+alias cd="z"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -14,6 +15,7 @@ alias cat='bat'
 alias la='ls -a'
 alias du='du -h'
 alias cp='cp -i'
+alias apply='paplay'
 alias mkdirp='mkdir -p'
 alias shex='chmod +x'
 
@@ -125,7 +127,7 @@ alias pytorch='source ~/build/pytorch/bin/activate'
 
 #flutter
 alias f='flutter'
-alias fd='flutter doctor'
+alias fdoc='flutter doctor'
 alias frun='flutter run'
 alias fget='flutter pub get'
 alias fadd='flutter pub add'

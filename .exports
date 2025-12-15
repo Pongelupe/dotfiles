@@ -3,6 +3,6 @@
 # Make vim the default editor.
 export EDITOR='vim';
 export DOT_FILES=$HOME'/workspace/dotfiles'
-export ZSH_CUSTOM="/usr/share/oh-my-zsh//custom"
+export CHEAT_USE_FZF=true
 
 

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# maven
+alias m='mvn'
+alias mc='mvn clean'
+alias mi='mvn install'
+alias mci='mvn clean install -U'
+alias mt='mvn test'
+alias mci-skip-tests='mvn clean install -U -DskipTests'
+alias mt-skip-tests='mvn test -DskipTests'
+alias msources='mvn dependency:sources'
+alias mtree='mvn dependency:tree'
+
+# python
+alias p='python'
+alias penv='python -m venv'
+alias penvs='source base/bin/activate'
+alias penvb='python -m venv base && source base/bin/activate'
+alias penis='python -m venv base && source base/bin/activate && pip install -r requirements.txt'
+alias pipi='pip install'
+alias pipireq='pip install -r requirements.txt'
+alias pipfreezereq='pip freeze > requirements.txt'
+
+# jupyter
+alias j='jupyter'
+alias j-notebook='jupyter notebook &'
+alias jupytext-bind='jupytext --set-formats ipynb,py:percent '
+
+# pytorch
+alias pytorch='source ~/build/pytorch/bin/activate'
+
+# flutter
+alias f='flutter'
+alias fdoc='flutter doctor'
+alias frun='flutter run'
+alias fget='flutter pub get'
+alias fadd='flutter pub add'
+alias fremove='flutter pub remove'
+alias sdkmanager='sdkmanager --sdk_root=${ANDROID_HOME}'
+
+# mermaid 
+alias mmdc='docker run --rm -u `id -u`:`id -g` -v ./:/data minlag/mermaid-cli'

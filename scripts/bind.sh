@@ -1,6 +1,9 @@
 # !/bin/bash
 
-ln -sf "$DOT_FILES/.aliases" "$HOME/.aliases"
+for file in "$DOT_FILES"/.aliases*; do
+	ln -sf "$file" "$HOME/$(basename "$file")"
+done
+
 ln -sf "$DOT_FILES/.config" "$HOME/.config"
 ln -sf "$DOT_FILES/.exports" "$HOME/.exports"
 ln -sf "$DOT_FILES/.gitconfig" "$HOME/.gitconfig"

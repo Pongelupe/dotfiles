@@ -4,6 +4,9 @@ cowsay
 dbeaver
 docker
 docker-compose
+eza
+fd
+fx
 fzf
 grep
 jq
@@ -17,8 +20,10 @@ nethack
 npm
 obs-studio
 okular
+ripgrep
 screenfetch
 tar
+tldr
 thefuck
 texinfo
 texlive-bibtexextra
@@ -42,6 +47,7 @@ yay
 zathura
 zathura-pdf-poppler
 zip
+zoxide
 zsh
 zsh-autosuggestions
 zsh-completions

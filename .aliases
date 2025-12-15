@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 # Easier navigation: .., ..., ...., .....
 alias cd="z"
 alias ..="cd .."
@@ -12,7 +11,9 @@ alias dot="cd $DOT_FILES"
 # utilities
 alias :q="poweroff"
 alias cat='bat'
+alias ls='eza'
 alias la='ls -a'
+alias ß='ls'
 alias du='du -h'
 alias cp='cp -i'
 alias apply='paplay'
@@ -20,15 +21,15 @@ alias mkdirp='mkdir -p'
 alias shex='chmod +x'
 
 # zmk
-alias cygnus-help='xdg-open "https://github.com/Pongelupe/cygnus-zmk-config"'
+alias cygnus-help='open "https://github.com/Pongelupe/cygnus-zmk-config"'
 
-#aliases and configs
-alias a='cat ~/.aliases'
+# aliases and configs
+alias a='view_aliases'
 alias aupdate='source ~/.aliases'
 alias aedit='vim ~/.aliases'
 alias aedit-update='vim ~/.aliases && source ~/.aliases'
 
-#vim
+# vim
 alias v='vim'
 alias vpinstall='vim +"PlugInstall --sync" +qall'
 alias vpupdate='vim +"PlugUpdate --sync" +qall'
@@ -37,105 +38,14 @@ alias av='cat ~/.vimrc'
 alias av-edit='vim ~/.vimrc'
 alias dadbod='vim +"DBUI"'
 
-#git
-alias g='git'
-alias ga='git add'
-alias gap='git add --interactive  -p'
-alias gaa='git add -A'
-alias gr='git rm'
-alias gs='git status'
-alias gm='git merge'
-alias gms='git merge --squash'
-alias gma='git merge -'
-alias gl='git log'
-alias gl1='git log -n1'
-alias gc='git checkout'
-alias gca='git checkout -'
-alias gcb='git checkout -b'
-alias gcommit='git commit -m'
-alias gcommita='git commit --amend'
-alias gcommitall='git commit -am'
-alias gpush='git push'
-alias gpushd='git push --delete origin'
-alias gpusho='git push -u origin $(git branch | grep \* | tr " " "\n" | tail -n1)'
-alias gpull='git pull'
-alias grev='git revert'
-alias grev-last='git revert $(git log -n1 | grep commit | tr -s " " "\012" | tail -n 1)'
-alias grestore='git restore'
-alias grestore-staged='git restore --staged'
-alias greset='git reset --hard'
-alias gb='git branch'
-alias gbd='git branch -D'
-alias gdiff='git diff'
-alias ginit='git init'
-alias gclone='git clone'
-alias gc-p='git cherry-pick'
-
-#mermaid 
-alias mmdc='docker run --rm -u `id -u`:`id -g` -v ./:/data minlag/mermaid-cli'
-
-#maven
-alias m='mvn'
-alias mc='mvn clean'
-alias mi='mvn install'
-alias mci='mvn clean install -U'
-alias mt='mvn test'
-alias mci-skip-tests='mvn clean install -U -DskipTests'
-alias mt-skip-tests='mvn test -DskipTests'
-alias msources='mvn dependency:sources'
-alias mtree='mvn dependency:tree'
-
-#docker
-alias d='docker'
-alias dfb='build_dockerfile_with_name'
-alias di='docker images'
-alias dps'docker ps'
-alias dpsa='docker ps -a'
-alias dstop='docker stop'
-alias dstop-remove='stop_remove_container_with_name'
-alias dstart='docker start'
-alias dl='docker logs'
-alias dlf='docker logs -f'
-alias dc='docker-compose'
-alias dcp='docker-compose --profile'
-alias dcup='docker-compose up -d'
-alias dcdown='docker-compose down'
-alias dcreset='docker-compose down && docker-compose up -d'
-
-# laTeX
-alias tl='find . -type f \( -name "*.aux" -o -name "*.log" -o -name "*.out" -o -name "*.toc" -o -name "*.lof" -o -name "*.lot" -o -name "*.fls" -o -name "*.fdb_latexmk" -o -name "*.bbl" -o -name "*.blg" -o -name "*.synctex.gz" -o -name "*.nav" -o -name "*.snm" -o -name "*.vrb" -o -name "*.thm" -o -name "*.brf" \)'
-
-alias tclean='find . -type f \( -name "*.aux" -o -name "*.log" -o -name "*.out" -o -name "*.toc" -o -name "*.lof" -o -name "*.lot" -o -name "*.fls" -o -name "*.fdb_latexmk" -o -name "*.bbl" -o -name "*.blg" -o -name "*.synctex.gz" -o -name "*.nav" -o -name "*.snm" -o -name "*.vrb" -o -name "*.thm" -o -name "*.brf" \) -delete'
-
-#python
-alias p='python'
-alias penv='python -m venv'
-alias penvs='source base/bin/activate'
-alias penvb='python -m venv base && source base/bin/activate'
-alias penis='python -m venv base && source base/bin/activate && pip install -r requirements.txt'
-alias pipi='pip install'
-alias pipireq='pip install -r requirements.txt'
-alias pipfreezereq='pip freeze > requirements.txt'
-
-#jupyter
-alias j='jupyter'
-alias j-notebook='jupyter notebook &'
-alias jupytext-bind='jupytext --set-formats ipynb,py:percent '
-
-#pytorch
-alias pytorch='source ~/build/pytorch/bin/activate'
-
-#flutter
-alias f='flutter'
-alias fdoc='flutter doctor'
-alias frun='flutter run'
-alias fget='flutter pub get'
-alias fadd='flutter pub add'
-alias fremove='flutter pub remove'
-alias sdkmanager='sdkmanager --sdk_root=${ANDROID_HOME}'
-
 # oh-my-zsh
 alias emoji='print_emoji_by_name'
 alias emojir='random_emoji'
 alias emojis='display_emoji'
 alias emojisg='display_emoji | grep'
+
+# Source category-specific aliases
+for file in ~/.aliases.*; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;

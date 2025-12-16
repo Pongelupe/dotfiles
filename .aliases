@@ -2,6 +2,7 @@
 
 # Easier navigation: .., ..., ...., .....
 alias cd="z"
+alias cda="z -"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -21,16 +22,16 @@ alias mkdirp='mkdir -p'
 alias shex='chmod +x'
 
 # zmk
-alias cygnus-help='firefox "https://github.com/Pongelupe/cygnus-zmk-config"'
+alias cygnus-help='open "https://github.com/Pongelupe/cygnus-zmk-config"'
 
 # aliases and configs
-alias a='view_aliases'
-alias aupdate='source ~/.aliases'
-alias aedit='vim ~/.aliases'
-alias aedit-update='vim ~/.aliases && source ~/.aliases'
+alias a='aliases'
+alias ae='aliases -e'
+compdef _aliases a ae
 
 # vim
 alias v='vim'
+alias vl1='vim "$(grep "^>" ~/.viminfo | head -1 | cut -c3- | sed "s|^~|$HOME|")"'
 alias vpinstall='vim +"PlugInstall --sync" +qall'
 alias vpupdate='vim +"PlugUpdate --sync" +qall'
 alias vpclean='vim +"PlugClean --sync" +qall'
@@ -44,8 +45,3 @@ alias emojir='random_emoji'
 alias emojis='display_emoji'
 alias emojisg='display_emoji | grep'
 
-# Source category-specific aliases
-for file in ~/.aliases.*; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
-unset file;

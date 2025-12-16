@@ -1,9 +1,9 @@
-#compdef view_aliases
+#compdef aliases
 
-_view_aliases() {
+_aliases() {
   local -a categories
   categories=('all:Show all aliases' 'git:Git aliases' 'docker:Docker aliases' 'dev:Development aliases')
   _describe 'category' categories
 }
 
-_view_aliases
+_aliases

@@ -63,7 +63,6 @@ ZSH_THEME="half-life"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM="/usr/share/oh-my-zsh//custom"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -104,7 +103,7 @@ precmd() {
 
 USE_POWERLINE="true"
 eval $(thefuck --alias)
-for file in ~/.{path,exports,aliases}; do
+for file in ~/.{path,exports,aliases*}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
@@ -113,6 +112,9 @@ UTIL_FUNCTIONS_DIR="$DOT_FILES/scripts/utils"
 for util in "$UTIL_FUNCTIONS_DIR"/*; do
 	source $util
 done
+
+fpath=($DOT_FILES/.config/zsh/completions $fpath)
+autoload -Uz compinit && compinit
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -148,7 +150,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 

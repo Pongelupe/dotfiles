@@ -21,7 +21,7 @@ alias mkdirp='mkdir -p'
 alias shex='chmod +x'
 
 # zmk
-alias cygnus-help='open "https://github.com/Pongelupe/cygnus-zmk-config"'
+alias cygnus-help='firefox "https://github.com/Pongelupe/cygnus-zmk-config"'
 
 # aliases and configs
 alias a='view_aliases'

@@ -52,6 +52,8 @@ Plug 'rhysd/git-messenger.vim'
 
 
 " appearance, UI utils and text editing
+Plug 'Pongelupe/control-room.vim'
+let g:control_room_use_dispatch = 1
 Plug 'ajmwagar/vim-deus'
 Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1

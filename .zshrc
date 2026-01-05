@@ -94,7 +94,7 @@ precmd() {
 		now=$(($(date +%s%N)/1000000))
 		elapsed=$(($now-$timer))
 		if [ $elapsed -gt 1000 ]; then
-			printf '\033[1;33m⏲ %.2fs [%s]\033[0m\n' $(($elapsed/1000.0)) "$(date '+%H:%S')"
+			printf '\033[1;33m⏲ %.2fs [%s]\033[0m\n' $(($elapsed/1000.0)) "$(date '+%H:%M')"
 		fi
 		unset timer
 	fi

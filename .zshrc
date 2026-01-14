@@ -102,7 +102,6 @@ precmd() {
 
 
 USE_POWERLINE="true"
-eval $(thefuck --alias)
 for file in ~/.{path,exports,aliases*}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
@@ -143,6 +142,8 @@ autoload -Uz compinit && compinit
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+[ -d /home/linuxbrew/.linuxbrew ] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+eval $(thefuck --alias)
 eval "$(zoxide init zsh)"
 eval "$(mcfly init zsh)"
 

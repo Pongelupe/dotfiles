@@ -4,7 +4,11 @@ for file in "$DOT_FILES"/.aliases*; do
 	ln -sf "$file" "$HOME/$(basename "$file")"
 done
 
-ln -sf "$DOT_FILES/.config" "$HOME/.config"
+mkdir -p "$HOME/.config"
+for file in "$DOT_FILES"/.config/*; do
+	ln -sf "$file" "$HOME/.config/$(basename "$file")" 
+done
+
 ln -sf "$DOT_FILES/.exports" "$HOME/.exports"
 ln -sf "$DOT_FILES/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOT_FILES/.path" "$HOME/.path"

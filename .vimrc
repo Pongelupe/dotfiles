@@ -14,6 +14,7 @@ set hlsearch
 set nospell
 set spelllang=en_us
 set encoding=utf-8
+set mouse=a
 set updatetime=300
 set signcolumn=yes
 
@@ -54,6 +55,8 @@ Plug 'rhysd/git-messenger.vim'
 " appearance, UI utils and text editing
 Plug 'Pongelupe/control-room.vim'
 let g:control_room_use_dispatch = 1
+Plug 'morhetz/gruvbox'
+let g:gruvbox_contrast_dark = 'soft'
 Plug 'ajmwagar/vim-deus'
 Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1
@@ -179,4 +182,4 @@ endfunction
 
 nnoremap <silent> <F1> :call ToggleQuickFix()<cr>
 set background=dark
-colors deus
+colors gruvbox

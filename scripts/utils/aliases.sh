@@ -9,6 +9,6 @@ aliases() {
 		$edit && $EDITOR ~/.aliases && source ~/.aliases || bat ~/.aliases*
 	else
 		local file=~/.aliases."$category"
-		[ -f "$file" ] && { $edit && $EDITOR "$file" && source "$file" || bat "$file"; } || echo "Category not found. Available: git, docker, dev"
+		[ -f "$file" ] && { $edit && $EDITOR "$file" && source "$file" || cat "$file"; } || echo "Category not found. Available: git, docker, dev"
 	fi
 }

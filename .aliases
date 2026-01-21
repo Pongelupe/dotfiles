@@ -11,7 +11,8 @@ alias dot="cd $DOT_FILES"
 
 # utilities
 alias :q="poweroff"
-alias cat='bat'
+alias cat='batcat'
+alias bat='batcat'
 alias ls='eza'
 alias la='ls -a'
 alias ß='ls'
@@ -20,6 +21,8 @@ alias cp='cp -i'
 alias apply='paplay'
 alias mkdirp='mkdir -p'
 alias shex='chmod +x'
+alias python='python3'
+alias pip='pip3'
 
 # zmk
 alias cygnus-help='open "https://github.com/Pongelupe/cygnus-zmk-config"'

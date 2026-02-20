@@ -12,5 +12,5 @@ print_full_path_from_relative() {
 }
 
 copy_full_path_from_relative() {
-  print_full_path_from_relative $1 | xclip -selection clipboard
+  print_full_path_from_relative $1 | wl-copy 
 }

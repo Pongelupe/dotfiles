@@ -11,13 +11,14 @@ alias dot="cd $DOT_FILES"
 
 # utilities
 alias :q="poweroff"
-alias cat='catbat'
-alias bat='catbat'
+alias cat='batcat'
+alias bat='batcat'
 alias ls='eza'
 alias la='ls -a'
 alias ß='ls'
 alias du='du -h'
 alias cp='cp -i'
+alias cpr='copy_full_path_from_relative'
 alias apply='paplay'
 alias mkdirp='mkdir -p'
 alias shex='chmod +x'
@@ -48,3 +49,5 @@ alias emojir='random_emoji'
 alias emojis='display_emoji'
 alias emojisg='display_emoji | grep'
 
+# nbds
+alias nbds='docker run -v ./:/app --gpus all nbsp'

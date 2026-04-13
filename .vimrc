@@ -45,6 +45,7 @@ au InsertEnter * let updaterestore=&updatetime | set updatetime=15000
 au InsertLeave * let &updatetime=updaterestore
 
 call plug#begin()
+let g:control_room_use_dispatch = 1
 " git
 Plug 'tpope/vim-fugitive'
 Plug 'rbong/vim-flog'

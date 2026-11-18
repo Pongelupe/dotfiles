@@ -1,0 +1,12 @@
+{
+    "control": [
+        { "VTOY_DEFAULT_SEARCH_ROOT": "/iso" },
+        { "VTOY_MENU_TIMEOUT": 0 }
+    ],
+    "theme": {
+        "display_mode": "CLI",
+        "gfxmode": "1920x1080"
+    },
+    "menu_alias": [],
+    "menu_class": []
+}

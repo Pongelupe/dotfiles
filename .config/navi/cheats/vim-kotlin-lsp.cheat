@@ -1,0 +1,47 @@
+% vim, kotlin, lsp
+
+# Go to definition (gd) — Ctrl-o jumps back
+gd
+
+# Go to type definition (gy)
+gy
+
+# Go to implementation (gi)
+gi
+
+# List references (gr)
+gr
+
+# Hover docs / type info (K)
+K
+
+# Next diagnostic (]g)
+]g
+
+# Previous diagnostic ([g)
+[g
+
+# Rename symbol (Space r n)
+:call CocActionAsync('rename')
+
+# Code actions at cursor (Space a c)
+:call CocActionAsync('codeAction', 'cursor')
+
+# Quick fix current line (Space q f)
+:call CocActionAsync('doQuickfix')
+
+# List all diagnostics of the buffer
+:CocDiagnostics
+
+# Restart the language server
+:CocRestart
+
+# Is kotlin-lsp attached? (look for languageserver.kotlin)
+:CocList services
+
+# Server log ("Importing with Json" = good, "Gradle" = wrong root)
+:CocCommand workspace.showOutput
+
+# Inspect semantic token under cursor (to tweak highlight colors)
+:CocCommand semanticTokens.inspect
+

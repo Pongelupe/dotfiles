@@ -6,3 +6,5 @@ secrets/.ssh/id_rsa
 secrets/.ssh/known_hosts
 secrets/*.txt
 .key.tmp
+ventoy/iso/*.iso
+.config/navi/navi.log

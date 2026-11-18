@@ -1,0 +1,11 @@
+alacritty
+basictex
+docker
+docker-desktop
+eclipse-ide
+finch
+font-fira-code
+font-hack-nerd-font
+font-jetbrains-mono-nerd-font
+postman
+vlc

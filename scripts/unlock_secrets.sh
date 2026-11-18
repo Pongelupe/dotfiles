@@ -1,4 +1,4 @@
-# !/bin/bash
+#!/bin/bash
 
 echo "Executing a lockpick test..."
 cd $DOT_FILES/secrets

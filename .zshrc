@@ -108,7 +108,7 @@ done;
 unset file;
 
 UTIL_FUNCTIONS_DIR="$DOT_FILES/scripts/utils"
-for util in "$UTIL_FUNCTIONS_DIR"/*; do
+for util in "$UTIL_FUNCTIONS_DIR"/*.sh; do
 	source $util
 done
 
@@ -151,8 +151,10 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 	exec tmux
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# Added by Kiro CLI
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="${PATH:+$PATH:}$HOME/.local/bin" ;; esac

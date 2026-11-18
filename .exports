@@ -2,7 +2,6 @@
 
 # Make vim the default editor.
 export EDITOR='vim';
-export DOT_FILES=$HOME'/workspace/dotfiles'
-export CHEAT_USE_FZF=true
+export DOT_FILES=$HOME'/workspace/personal/dotfiles'
 
 

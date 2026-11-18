@@ -12,15 +12,16 @@ alias dot="cd $DOT_FILES"
 # utilities
 alias :q="poweroff"
 alias cat='bat'
-alias bat='bat'
 alias ls='eza'
 alias la='ls -a'
 alias ß='ls'
 alias du='du -h'
 alias cp='cp -i'
+alias cpr='copy_full_path_from_relative'
 alias apply='paplay'
 alias mkdirp='mkdir -p'
 alias shex='chmod +x'
+alias pwdc='pwd | pbcopy'
 alias python='python3'
 alias pip='pip3'
 

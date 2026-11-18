@@ -12,5 +12,13 @@ print_full_path_from_relative() {
 }
 
 copy_full_path_from_relative() {
-  print_full_path_from_relative $1 | xclip -selection clipboard
+  print_full_path_from_relative $1 | pbcopy
+}
+
+pipboy() {
+  if tmux list-windows -F '#W' 2>/dev/null | grep -q '^pipboy$'; then
+    tmux select-window -t pipboy
+  else
+    $PIPBOY_HOME/pipboy.sh
+  fi
 }

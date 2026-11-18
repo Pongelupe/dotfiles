@@ -12,6 +12,8 @@ alias msources='mvn dependency:sources'
 alias mtree='mvn dependency:tree'
 
 # python
+alias python='python3'
+alias pip='pip3'
 alias p='python'
 alias penv='python -m venv'
 alias penvs='source base/bin/activate'

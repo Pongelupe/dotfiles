@@ -1,0 +1,5 @@
+# community cheatsheets for `cheat` (was an orphan git submodule)
+[".config/cheat/cheatsheets/community"]
+    type = "git-repo"
+    url = "https://github.com/cheat/cheatsheets.git"
+    refreshPeriod = "168h"

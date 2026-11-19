@@ -1,4 +1,4 @@
-all: install decrypt bind
+all: install decrypt apply bind
 
 H = ${HOME}
 Z = ${ZSH_CUSTOM}
@@ -34,6 +34,14 @@ install:
 decrypt:
 	      @echo "Decrypting values"
 				bash ./scripts/unlock_secrets.sh
+
+apply:
+	@echo "Applying dotfiles with chezmoi"
+	chezmoi init --source $(CURDIR) --apply
+
+BATS ?= bats
+test:
+	$(BATS) tests/
 
 bind: 
 	      @echo "Biding values"

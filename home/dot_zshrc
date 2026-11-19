@@ -112,7 +112,7 @@ for util in "$UTIL_FUNCTIONS_DIR"/*.sh; do
 	source $util
 done
 
-fpath=($DOT_FILES/.config/zsh/completions $fpath)
+fpath=($HOME/.config/zsh/completions $fpath)
 autoload -Uz compinit && compinit
 
 # export MANPATH="/usr/local/man:$MANPATH"

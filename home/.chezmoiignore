@@ -1,0 +1,6 @@
+{{ if ne .chezmoi.os "linux" }}
+# Wayland/sway desktop configs only make sense on the Linux machines
+.config/sway
+.config/foot
+.config/input-remapper-2
+{{ end }}
